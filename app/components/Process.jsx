@@ -1,3 +1,4 @@
+"use client"
 import { useRef, useState } from "react";
 import useReveal from "../hooks/usereveal";
 

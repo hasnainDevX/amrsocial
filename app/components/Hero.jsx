@@ -1,5 +1,6 @@
+"use client";
+
 import { useEffect, useRef } from "react";
-import hero from "../assets/hero.mp4";
 import useReveal from "../hooks/usereveal";
 
 export default function Hero() {
@@ -35,7 +36,8 @@ export default function Hero() {
         poster="/hero-poster.jpg"
         aria-hidden="true"
       >
-        <source src={hero} type="video/mp4" />
+        {/* the video lives in /public, so the path starts with a slash */}
+        <source src="/hero.mp4" type="video/mp4" />
       </video>
 
       {/* Dark overlay */}
