@@ -6,12 +6,12 @@ import "./globals.css";
 const serif = localFont({
   src: [
     {
-      path: "./fonts/InstrumentSerif-Regular.woff2",
+      path: "./fonts/InstrumentSerif-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/InstrumentSerif-Italic.woff2",
+      path: "./fonts/InstrumentSerif-Italic.ttf",
       weight: "400",
       style: "italic",
     },
