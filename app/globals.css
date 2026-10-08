@@ -10,8 +10,12 @@
   --color-dark-grey: #181818;
   --color-soft-grey: #e7e3dd;
   --color-ivory: #faf6ee;        /* main background, navbar */
-  --color-ivory-deep: #f1eadc; 
+  --color-ivory-deep: #f1eadc;
   /* --color-deep-red: #790c0c; */
+
+  /* Dusty rose accents (used by the scrollbar, focus rings and hovers) */
+  --color-rose: #c99a9c;
+  --color-rose-deep: #9c6468;
 
   /* Typography: serif for display, DM Sans for paragraphs and UI */
   --font-serif: "Instrument Serif", Georgia, serif;
@@ -20,6 +24,30 @@
 
 html {
   scroll-behavior: smooth;
+
+  /* Custom scrollbar: thin, dusty rose thumb on a soft ivory track.
+     Standard properties: Chrome, Edge, Firefox and current Safari. */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-rose-deep) var(--color-espresso);
+}
+
+/* Fallback for older Safari, which ignores the two properties above */
+@supports not (scrollbar-color: auto) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-espresso);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-rose-deep);
+    border: 2px solid var(--color-espresso);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-espresso);
+  }
 }
 
 body {
