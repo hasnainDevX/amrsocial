@@ -7,6 +7,7 @@ import image1 from "../assets/result1.jpeg";
 import image2 from "../assets/result2.jpeg";
 import image3 from "../assets/result3.jpeg";
 import image4 from "../assets/result4.jpeg";
+import bgImage from "../assets/image.png";
 
 const LINKS = [
   {
@@ -71,12 +72,18 @@ export default function Footer({ href = "#inquire" }) {
   }, []);
 
   return (
-    <footer className="relative isolate overflow-hidden bg-espresso px-6 pb-10 pt-24 font-serif text-[#faf6ee] md:pt-32">
-      {/* Fine vertical lines */}
+    <footer
+      className="relative isolate overflow-hidden bg-espresso px-6 pb-10 pt-24 font-serif text-[#faf6ee] md:pt-32"
+      style={{
+        backgroundImage: `url(${bgImage.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Background overlay */}
       <div
         aria-hidden="true"
-        style={grid}
-        className="pointer-events-none absolute inset-0 -z-10 bg-[#faf6ee]/[0.05]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-espresso/80"
       />
 
       {/* Thin inset frame */}
@@ -144,11 +151,11 @@ export default function Footer({ href = "#inquire" }) {
 
       {/* Brand */}
       <div className="mx-auto max-w-3xl text-center">
-        <p className="text-[clamp(3rem,9vw,6.5rem)] italic leading-none tracking-wide">
+        <p className="text-[clamp(3rem,9vw,6.5rem)] leading-none tracking-wide">
           Amr.socials
         </p>
 
-        <p className="mx-auto mt-5 max-w-md text-xl italic leading-relaxed text-[#faf6ee]/70">
+        <p className="mx-auto mt-5 max-w-md text-xl leading-relaxed text-[#faf6ee]/70">
           Social media strategy for brands and creators who grow with their
           values intact.
         </p>
