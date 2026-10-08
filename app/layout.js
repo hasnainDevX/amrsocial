@@ -1,13 +1,21 @@
 import Script from "next/script";
-import { Instrument_Serif } from "next/font/google";
+import localFont from "next/font/local";
 import { SITE } from "./lib/site";
 import "./globals.css";
 
-// Loads only regular + italic, served from your own domain (no request to Google at runtime)
-const serif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
+const serif = localFont({
+  src: [
+    {
+      path: "./fonts/InstrumentSerif-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InstrumentSerif-Italic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+  ],
   variable: "--font-instrument-serif",
   display: "swap",
 });
