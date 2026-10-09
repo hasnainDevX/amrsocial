@@ -1,4 +1,4 @@
-import { SITE } from "./lib/sitete";
+import { SITE } from "./lib/site";
 
 export default function robots() {
   return {
