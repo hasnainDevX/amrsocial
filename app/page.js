@@ -10,6 +10,7 @@ import ContactForm from "./components/ContactForm";
 import InstagramFeed from "./components/InstagramFeed";
 import Footer from "./components/Footer";
 import CustomCursor from "./components/CustomCursor";
+import Packages from "./components/Packages";
 
 // This file is a server component, so the page's HTML is pre-rendered for Google.
 // Every component imported here must start with "use client" if it uses hooks, GSAP or onClick.
@@ -22,7 +23,8 @@ export default function Home() {
         <Hero />
         <TextLoop />
         <About />
-        <WhatWeDo />
+        {/* <WhatWeDo /> */}
+        <Packages/>
         <Process />
         <Testimonials />
         <Marquee />

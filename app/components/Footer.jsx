@@ -7,7 +7,7 @@ import image1 from "../assets/result1.jpeg";
 import image2 from "../assets/result2.jpeg";
 import image3 from "../assets/result3.jpeg";
 import image4 from "../assets/result4.jpeg";
-import bgImage from "../assets/image.png";
+import bgImage from "../assets/footerbg.png";
 
 const LINKS = [
   {
